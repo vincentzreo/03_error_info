@@ -7,10 +7,15 @@ edition = "2021"
 
 [dependencies]
 error-code-derive = { workspace = true }
-
+base64 = "0.22"
 
 [dev-dependencies]
 anyhow = { workspace = true }
 thiserror = { workspace = true }
 error-code = { workspace = true }
 http = { workspace = true }
+tokio = { version = "1.37.0", features = ["full"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+axum = { version = "0.7.5", features = ["http2", "query", "tracing"] }
+backtrace = "0.3.71"
